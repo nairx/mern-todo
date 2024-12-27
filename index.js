@@ -14,7 +14,7 @@ const PASS = process.env.PASS
 const usr = encodeURIComponent(DBUSER)
 const pwd = encodeURIComponent(PASS)
 
-mongoose.connect(`mongodb+srv://${usr}:${pwd}@cluster0.qjxhv.mongodb.net/todoapp1?retryWrites=true&w=majority&appName=Cluster0`)
+mongoose.connect(`mongodb+srv://${DBUSER}:${PASS}@cluster0.qjxhv.mongodb.net/todoapp1?retryWrites=true&w=majority&appName=Cluster0`)
 
 //////////////////////////
 // app.use(express.static("client/build"));
