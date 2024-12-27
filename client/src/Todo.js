@@ -8,7 +8,7 @@ export default function Todo() {
   const [count, setCount] = useState(0);
   useEffect(() => {
     axios
-      .get("http://localhost:8081/get/")
+      .get("/get/")
       .then((result) => setTodos(result.data))
       .catch((err) => console.log(err));
     console.log(count);
@@ -16,7 +16,7 @@ export default function Todo() {
 
   const handlesubmit = () => {
     axios
-      .post("http://localhost:8081/", { task: todo })
+      .post("/", { task: todo })
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
     setCount(count + 1);
@@ -24,14 +24,14 @@ export default function Todo() {
   
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:8081/" + id)
+      .delete("/" + id)
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
     setCount(count + 1);
   };
   const handleEdit = (id, done) => {
     axios
-      .put("http://localhost:8081/" + id, { done: done })
+      .put("/" + id, { done: done })
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
     setCount(count + 1);

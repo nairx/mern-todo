@@ -9,8 +9,18 @@ app.use(express.json());
 
 
 // mongoose.connect("mongodb://127.0.0.1:27017/mydb3");
+const DBUSER = process.env.DBUSER
+const PASS = process.env.PASS
 
-mongoose.connect("mongodb+srv://nairx:KgHbSM9v0g078Fbi@cluster0.qjxhv.mongodb.net/todoapp?retryWrites=true&w=majority&appName=Cluster0/todoapp1")
+const usr = encodeURIComponent(DBUSER)
+const pwd = encodeURIComponent(PASS)
+
+// const usr = encodeURIComponent('nairx')
+// const pwd = encodeURIComponent('KgHbSM9v0g078Fbi')
+
+// mongoose.connect(`mongodb+srv://${usr}:${pwd}@cluster0.qjxhv.mongodb.net/todoapp1?retryWrites=true&w=majority&appName=Cluster0`)
+
+mongoose.connect("mongodb+srv://nairx:KgHbSM9v0g078Fbi@cluster0.qjxhv.mongodb.net/todoapp1?retryWrites=true&w=majority&appName=Cluster0/todoapp")
 
 
 
