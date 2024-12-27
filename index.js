@@ -23,7 +23,6 @@ const pwd = encodeURIComponent(PASS)
 mongoose.connect("mongodb+srv://nairx:KgHbSM9v0g078Fbi@cluster0.qjxhv.mongodb.net/todoapp1?retryWrites=true&w=majority&appName=Cluster0")
 
 
-
 //////////////////////////
 app.use(express.static("client/build"));
 /////////////////////////
