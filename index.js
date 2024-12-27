@@ -20,7 +20,7 @@ const pwd = encodeURIComponent(PASS)
 
 // mongoose.connect(`mongodb+srv://${usr}:${pwd}@cluster0.qjxhv.mongodb.net/todoapp1?retryWrites=true&w=majority&appName=Cluster0`)
 
-mongoose.connect("mongodb+srv://nairx:KgHbSM9v0g078Fbi@cluster0.qjxhv.mongodb.net/todoapp1?retryWrites=true&w=majority&appName=Cluster0/todoapp")
+mongoose.connect("mongodb+srv://nairx:KgHbSM9v0g078Fbi@cluster0.qjxhv.mongodb.net/todoapp1?retryWrites=true&w=majority&appName=Cluster0")
 
 
 
