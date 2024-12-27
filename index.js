@@ -1,27 +1,17 @@
 var express = require("express");
 const app = express();
 // const cors = require("cors");
+require('dotenv').config();
 const mongoose = require("mongoose");
 const TodoModel = require("./Models/Todo");
 
 // app.use(cors());
 app.use(express.json());
 
-
-// mongoose.connect("mongodb://127.0.0.1:27017/mydb3");
 const DBUSER = process.env.DBUSER
 const PASS = process.env.PASS
 
-const usr = encodeURIComponent(DBUSER)
-const pwd = encodeURIComponent(PASS)
-
-// const usr = encodeURIComponent('nairx')
-// const pwd = encodeURIComponent('KgHbSM9v0g078Fbi')
-
-// mongoose.connect(`mongodb+srv://${usr}:${pwd}@cluster0.qjxhv.mongodb.net/todoapp1?retryWrites=true&w=majority&appName=Cluster0`)
-
-mongoose.connect("mongodb+srv://nairx:KgHbSM9v0g078Fbi@cluster0.qjxhv.mongodb.net/todoapp1?retryWrites=true&w=majority&appName=Cluster0")
-
+mongoose.connect(`mongodb+srv://${DBUSER}:${PASS}@cluster0.qjxhv.mongodb.net/todoapp1?retryWrites=true&w=majority&appName=Cluster0`)
 
 //////////////////////////
 // app.use(express.static("client/build"));
