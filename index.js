@@ -24,7 +24,8 @@ mongoose.connect("mongodb+srv://nairx:KgHbSM9v0g078Fbi@cluster0.qjxhv.mongodb.ne
 
 
 //////////////////////////
-app.use(express.static("client/build"));
+// app.use(express.static("client/build"));
+app.use(express.static(__dirname + '/client/build'));
 /////////////////////////
 
 app.put("/:id", function (req, res) {
